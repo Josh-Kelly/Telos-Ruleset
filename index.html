@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>TTRPG Rules</title>
+    <title>Telos Rules</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <h1>My TTRPG Rules</h1>
+      <h1>Telos Rules</h1>
     </header>
 
     <div class="tabs">
+      <button class="tab-button" data-tab="equipment">Equipment</button>
       <button class="tab-button" data-tab="intro">Introduction</button>
       <button class="tab-button" data-tab="combat">Combat</button>
       <button class="tab-button" data-tab="skills">Skills</button>
@@ -21,6 +23,12 @@
     </div>
 
     <main>
+      <section id="equipment" class="tab-content">
+        <h2>Equipment</h2>
+        <p>Welcome to the world of [Your TTRPG Name]. In this system, we...</p>
+        <div class="list" id="equipment-list"></div>
+      </section>
+
       <section id="intro" class="tab-content">
         <h2>Introduction</h2>
         <p>Welcome to the world of [Your TTRPG Name]. In this system, we...</p>
@@ -46,6 +54,6 @@
       <p>Made with ❤️ by [Your Name]</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

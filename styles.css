@@ -13,7 +13,7 @@ body {
   color: #b5b5b5;  /* Light gray text to avoid harsh contrast */
   padding-top: 20px;
   margin: 0;
-  background-image: url('https://www.transparenttextures.com/patterns/stonewall.png'); /* Subtle stone texture */
+  background-image: url("https://transparenttextures.com/patterns/gravel.png"); /* Subtle stone texture */
   background-attachment: fixed;
   background-size: cover;  /* Scales the texture across the page */
 }
@@ -112,7 +112,7 @@ footer p {
 
 /* Optional texture effects */
 body {
-  background-image: url('https://www.transparenttextures.com/patterns/stonewall.png'); /* Subtle stone texture */
+  background-image: url("https://transparenttextures.com/patterns/gravel.png"); /* Subtle stone texture */
   background-attachment: fixed;
   background-size: cover;
 }
