@@ -1,2 +1,3 @@
 # Telos-Ruleset
-A website for navigating and searching the Telos TTRPG game system.
+
+A website for navigating and searching the Telos TTRPG game system. Woot.
