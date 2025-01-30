@@ -1,0 +1,118 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and basic styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #1c1c1c;  /* Dark, muted background */
+  color: #b5b5b5;  /* Light gray text to avoid harsh contrast */
+  padding-top: 20px;
+  margin: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/stonewall.png'); /* Subtle stone texture */
+  background-attachment: fixed;
+  background-size: cover;  /* Scales the texture across the page */
+}
+
+/* Title and headers */
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: normal;
+  color: #d35400;  /* Muted orange, not too bright */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);  /* Soft shadow for a more grunge look */
+  letter-spacing: 1px;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;  /* Dark steel color */
+  color: #ecf0f1;  /* Off-white for softer contrast */
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #34495e;  /* Subtle border to define the header */
+}
+
+/* Tabs */
+.tabs {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.tab-button {
+  background-color: #34495e;  /* Faded steel blue */
+  color: #bdc3c7;  /* Muted light gray */
+  padding: 10px 20px;
+  border: 1px solid #2c3e50;  /* Matching the background of the header */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #2c3e50;  /* Darker shade on hover */
+  color: #fff;
+}
+
+.tab-button.active {
+  background-color: #d35400;  /* Soft muted orange for active state */
+  color: #fff;
+  border-color: #d35400;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: rgba(44, 62, 80, 0.9);  /* Dark translucent background */
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h2 {
+  color: #e67e22;  /* Muted amber/yellow for subheadings */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);  /* Soft, subtle shadow for depth */
+}
+
+.tab-content p {
+  color: #bdc3c7;  /* Softer gray text */
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #34495e;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Optional texture effects */
+body {
+  background-image: url('https://www.transparenttextures.com/patterns/stonewall.png'); /* Subtle stone texture */
+  background-attachment: fixed;
+  background-size: cover;
+}
