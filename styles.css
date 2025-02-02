@@ -7,8 +7,10 @@
 /* setting default colors */
 :root {
 --light-grey-text: #b5b5b5; /* Light gray text to avoid harsh contrast */
+--soft-grey-text: #bdc3c7;  /* Softer gray text */
 --dark-orange-text: #d35400; /* Muted orange, not too bright */
 --light-orange-text: #e67e22;   /* Muted amber/yellow for subheadings */
+--lighter-blue-overlay: rgba(44, 62, 80, 0.9); /* Dark blue-gray background with transparency */
 }
 
 /* Body and basic styles */
@@ -102,7 +104,6 @@ header {
 }
 
 .tab-content p {
-  color: #bdc3c7;  /* Softer gray text */
   line-height: 1.8;
 }
 
@@ -217,15 +218,15 @@ tr:hover td {
 }
 
 /* Equipment Tables */
-#equipment-table-container {
+#armor-and-weapon-table-container {
   display: flex;
   gap: 30px; /* Adds space between tables */
-  justify-content: center; /* Ensures tables are evenly spaced */
+  justify-content: left; /* Ensures tables are evenly spaced */
   flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
   align-items: flex-start; /* Aligns tables to the top */
 }
 
-#equipment-table-container div {
+#armor-and-weapon-table-container div {
   min-width: 300px; /* Prevents shrinking too much on small screens */
 }
 
@@ -237,20 +238,49 @@ tr:hover td {
 .side-by-side {
   display: flex; /* Keeps the container as a flexbox */
   gap: 20px; /* Adds space between the elements */
+  align-items: flex-start;
 }
 
 .side-by-side p {
   flex: 1; /* Makes the paragraphs take equal space */
-  max-width: 60%; /* Allows more space for the main paragraph */
+  max-width: 100%; /* Allows more space for the main paragraph */
 }
 
 .example-text {
-  flex: 0 0 35%; /* Takes up a fixed width (adjust as necessary) */
-  background-color: #f4f4f4; /* Light background to separate the aside from main content */
+  background-color: var(--lighter-blue-overlay); /* Light background to separate the aside from main content */
   padding: 10px; /* Adds space inside the example box */
   border-left: 4px solid #ccc; /* Optional: adds a visual divider on the left */
   margin-top: 10px; /* Optional: adds space above the example text */
   font-style: italic; /* Italicizes the example text */
   color: var(--light-orange-text); /* Sets a distinct color for the example */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for better visual separation */
+}
+
+main {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* Styling the nav element */
+
+.sticky-nav {
+  color: var(--light-orange-text);
+  text-decoration: none;
+  display: flex;
+  gap: 30px;
+  background-color: var(--lighter-blue-overlay);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.sticky-nav p {
+  flex: 1;
+  text-align: center;
+}
+
+.sticky-nav a:visited {
+  color: inherit;
 }
