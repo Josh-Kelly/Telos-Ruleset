@@ -46,3 +46,23 @@ function populateEquipmentData() {
     }
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all buttons with the class "accordion-button"
+  const accordionButtons = document.querySelectorAll(".accordion-button");
+
+  // Loop through each button and attach a click event listener
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Get the next sibling element, which is the corresponding content div
+      const content = this.nextElementSibling;
+
+      // Toggle the display property between "block" and "none"
+      if (content.style.display === "block") {
+        content.style.display = "none"; // Hide content if it's currently visible
+      } else {
+        content.style.display = "block"; // Show content if it's currently hidden
+      }
+    });
+  });
+});
