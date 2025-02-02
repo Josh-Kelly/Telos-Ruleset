@@ -25,9 +25,155 @@
 
     <main>
       <section id="equipment" class="tab-content">
-        <h2>Equipment</h2>
-        <p>Welcome to the world of [Your TTRPG Name]. In this system, we...</p>
+        <h2>Weapons and Armor</h2>
+        <h4>Armor Class</h4>
+        <div class="side-by-side">
+          <p>
+            Each single source of bludgeoning, piercing, and slashing damage must deal damage greater than the Armor Class or the
+            damage is negated. Armor Class does NOT reduce damage, ever, so if a source of damage exceeds the Armor Class, the
+            full damage is applied to the creature.
+          </p>
+          <p class="example-text">
+            As the goblin horde descends on the gnome PC, Lykaia in her werewolf form throws herself over the gnome’s body and
+            curls into a ball to protect her. The goblins hack at Lykaia’s hide, hitting automatically because Lykaia is making no
+            move to defend herself. However, Lykaia’s werewolf hide has an AC of 6. The goblins deal 3, 3, 3, 4, 5, 5, and 6
+            damage. Lykaia shrugs off the first six attacks, but the seventh bites deep enough to harm her.
+          </p>
+        </div>
+        <h4>Damage Reduction</h4>
+        <div class="side-by-side">
+          <p>
+            Each single source of bludgeoning, piercing, and slashing damage that is not negated by the target’s Armor Class is
+            reduced by the armor’s Damage Reduction. Leftover damage is subtracted from the target’s Stamina/Health. DR is always
+            equal to or lower than AC.
+          </p>
+          <p class="example-text">
+            Keeping with the example above, Lykaia’s werewolf hide has a DR of 4, so even though the goblin managed to break
+            through her AC and hurt her, the 6 damage is reduced by 4 to 2. Her Stamina (if she has any left) is reduced by 2, and
+            any leftover damage reduces her Health.
+          </p>
+        </div>
+        <div id="equipment-table-container">
+          <div class="table-wrap">
+            <h3>Armor</h3>
+            <table id="armor-table">
+              <tr>
+                <th></th>
+                <th>Defense Penalty</th>
+                <th>AC</th>
+                <th>DR</th>
+                <th>Effects</th>
+              </tr>
+              <tr>
+                <td>Gambeson</td>
+                <td rowspan="5">None</td>
+                <td rowspan="2">None</td>
+                <td>1</td>
+                <td rowspan="2">None</td>
+              </tr>
+              <tr>
+                <td>Leather jerkin</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Mail shirt</td>
+                <td>4</td>
+                <td rowspan="3">3</td>
+                <td rowspan="3">Disadvantage on stealth</td>
+              </tr>
+              <tr>
+                <td>Hauberk</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Brigandine</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Cuirass</td>
+                <td>1</td>
+                <td>6</td>
+                <td rowspan="3">5</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Half-plate</td>
+                <td rowspan="2">2</td>
+                <td>7</td>
+                <td rowspan="2">Disadvantage on stealth</td>
+              </tr>
+              <tr>
+                <td>Plate</td>
+                <td>9</td>
+              </tr>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <h3>Weapon Groups</h3>
+            <table id="weapon-group-table">
+              <tr>
+                <th>Weapon Groups</th>
+                <th>Weapon Types</th>
+              </tr>
+              <tr>
+                <td>Blunt / Axe / Spike</td>
+                <td>
+                  Club, Mace, Warhammer, Flail, Morningstar, War Pick, Shortbow (unstrung), Greatclub, Maul, Greatbow (unstrung),
+                  Handaxe, Hatchet, Tomahawk, Battleaxe, Greataxe
+                </td>
+              </tr>
+              <tr>
+                <td>Sword</td>
+                <td>
+                  Shortsword, Gladius, Scimitar, Sabre, Kopesh, Longsword, Bastard Sword, Hand-and-a-Half Sword, Broadsword,
+                  Zweihander, Claymore
+                </td>
+              </tr>
+              <tr>
+                <td>Scythe</td>
+                <td>Sickle, 1-handed Scythe, War Sickle, Scythe, War Scythe</td>
+              </tr>
+              <tr>
+                <td>Dagger</td>
+                <td>Dagger, Dirk, Poignard, Sword-breaker</td>
+              </tr>
+              <tr>
+                <td>Spear / Polearm</td>
+                <td>
+                  Javelin, Short-spear, Glaive, Naginata, Long-spear, Halberd, Javelin (melee), Boar Spear, Lance, Pike,
+                  Quarterstaff, Longbow (unstrung)
+                </td>
+              </tr>
+              <tr>
+                <td>Bow</td>
+                <td>Shortbow, Recurve Bow, Longbow, Greatbow</td>
+              </tr>
+              <tr>
+                <td>Crossbow</td>
+                <td>Hand Crossbow, Crossbow, Heavy Crossbow, Siege Crossbow</td>
+              </tr>
+              <tr>
+                <td>Sling</td>
+                <td>Sling, Staff-sling</td>
+              </tr>
+              <tr>
+                <td>Unarmed</td>
+                <td>Fists, Brass Knuckles, Caestus, Punch-dagger</td>
+              </tr>
+              <tr>
+                <td>Trap / Trickery</td>
+                <td>Bolo, Whip, Net</td>
+              </tr>
+              <tr>
+                <td>Dual-wield</td>
+                <td>(any two 1-handed weapons)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
         <div class="list" id="equipment-list"></div>
+
+        <h2>Equipment</h2>
       </section>
 
       <section id="intro" class="tab-content">
@@ -105,9 +251,10 @@
     </main>
 
     <footer>
-      <p>Made with ❤️ by [Your Name]</p>
+      <p>Made by [Joshua Kelly]</p>
     </footer>
 
     <script type="module" src="app.js"></script>
+    <script src="equipmentData.js"></script>
   </body>
 </html>

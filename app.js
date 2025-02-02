@@ -1,7 +1,3 @@
-import { armorData } from "./equipmentData.js";
-
-window.onload = populateEquipmentData();
-
 // Function to handle tab clicks
 document.querySelectorAll(".tab-button").forEach((button) => {
   button.addEventListener("click", function () {
@@ -24,28 +20,6 @@ document.querySelectorAll(".tab-button").forEach((button) => {
 // Optionally, set the first tab as active on page load
 document.querySelector(".tab-button").classList.add("active");
 document.querySelector(".tab-content").classList.add("active");
-
-function populateEquipmentData() {
-  console.log("Hello!");
-  console.log(armorData);
-  // Get the equipment list div
-  const equipmentListDiv = document.getElementById("equipment-list");
-
-  // Iterate over each item in armorData
-  for (const key in armorData) {
-    console.log(key);
-    if (armorData.hasOwnProperty(key)) {
-      const item = armorData[key];
-
-      // Create a <p> element for the item name
-      const pElement = document.createElement("p");
-      pElement.textContent = item.name; // Set the text to the name of the item
-
-      // Append the <p> element to the equipment list div
-      equipmentListDiv.appendChild(pElement);
-    }
-  }
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   // Select all buttons with the class "accordion-button"

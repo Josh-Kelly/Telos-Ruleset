@@ -4,12 +4,19 @@
   box-sizing: border-box;
 }
 
+/* setting default colors */
+:root {
+--light-grey-text: #b5b5b5; /* Light gray text to avoid harsh contrast */
+--dark-orange-text: #d35400; /* Muted orange, not too bright */
+--light-orange-text: #e67e22;   /* Muted amber/yellow for subheadings */
+}
+
 /* Body and basic styles */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #1c1c1c;  /* Dark, muted background */
-  color: #b5b5b5;  /* Light gray text to avoid harsh contrast */
+  color: var(--light-grey-text);  
   padding-top: 20px;
   margin: 0;
   background-image: url("https://transparenttextures.com/patterns/gravel.png"); /* Subtle stone texture */
@@ -21,9 +28,16 @@ body {
 h1, h2 {
   font-family: 'Cinzel', serif;
   font-weight: normal;
-  color: #d35400;  /* Muted orange, not too bright */
+  color: var(--dark-orange-text);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);  /* Soft shadow for a more grunge look */
   letter-spacing: 1px;
+}
+
+h3 {
+  font-family: 'Cinzel', serif;
+  font-weight: normal;
+  color: var(--light-orange-text);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);  /* Soft shadow for a more grunge look */
 }
 
 /* Header */
@@ -82,8 +96,8 @@ header {
   display: block;
 }
 
-.tab-content h2 {
-  color: #e67e22;  /* Muted amber/yellow for subheadings */
+.tab-content h2, h3 {
+  color: var(--light-orange-text);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);  /* Soft, subtle shadow for depth */
 }
 
@@ -93,13 +107,13 @@ header {
 }
 
 .tab-content div {
-  display: block !important;
-  margin-bottom: 1em !important;
+  display: block;
+  margin-bottom: 1em;
 }
 
 div {
-  display: block !important;
-  margin-bottom: 3em !important;
+  display: block;
+  margin-bottom: 3em;
 }
 
 /* Footer */
@@ -162,4 +176,81 @@ body {
   border-radius: 5px;
   margin-bottom: 5px;
   color: #bdc3c7;
+}
+
+/* Table Styling */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(44, 62, 80, 0.9); /* Dark blue-gray background */
+  color: var(--light-grey-text); /* Soft light gray text */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #2c3e50; /* Dark steel border */
+  padding: 10px;
+}
+
+th {
+  background-color: #cf8e62; /* Muted orange headers */
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  background-color: rgba(101, 144, 187, 0.8); /* Slightly lighter steel color */
+  color: #ecf0f1; /* Off-white text */
+  text-align: center;
+  align-content: middle;
+}
+
+tr:nth-child(even) td {
+  background-color: rgba(92, 130, 168, 0.6); /* Alternate row color */
+}
+
+/* Hover effects for table rows */
+tr:hover td {
+  background-color: #8862cf; /* Dark orange on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* Equipment Tables */
+#equipment-table-container {
+  display: flex;
+  gap: 30px; /* Adds space between tables */
+  justify-content: center; /* Ensures tables are evenly spaced */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  align-items: flex-start; /* Aligns tables to the top */
+}
+
+#equipment-table-container div {
+  min-width: 300px; /* Prevents shrinking too much on small screens */
+}
+
+.table-wrap {
+  max-width: 45%;
+}
+
+/* Asides for explanation text and examples */
+.side-by-side {
+  display: flex; /* Keeps the container as a flexbox */
+  gap: 20px; /* Adds space between the elements */
+}
+
+.side-by-side p {
+  flex: 1; /* Makes the paragraphs take equal space */
+  max-width: 60%; /* Allows more space for the main paragraph */
+}
+
+.example-text {
+  flex: 0 0 35%; /* Takes up a fixed width (adjust as necessary) */
+  background-color: #f4f4f4; /* Light background to separate the aside from main content */
+  padding: 10px; /* Adds space inside the example box */
+  border-left: 4px solid #ccc; /* Optional: adds a visual divider on the left */
+  margin-top: 10px; /* Optional: adds space above the example text */
+  font-style: italic; /* Italicizes the example text */
+  color: var(--light-orange-text); /* Sets a distinct color for the example */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for better visual separation */
 }
