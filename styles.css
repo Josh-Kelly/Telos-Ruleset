@@ -35,7 +35,7 @@ h1, h2 {
   letter-spacing: 1px;
 }
 
-h3 {
+h3, h4 {
   font-family: 'Cinzel', serif;
   font-weight: normal;
   color: var(--light-orange-text);
@@ -98,7 +98,7 @@ header {
   display: block;
 }
 
-.tab-content h2, h3 {
+.tab-content h2, h3, h4 {
   color: var(--light-orange-text);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);  /* Soft, subtle shadow for depth */
 }
@@ -110,6 +110,11 @@ header {
 .tab-content div {
   display: block;
   margin-bottom: 1em;
+}
+
+.tab-content-section {
+  padding: 10px;
+  background-color: rgb(44, 62, 80);
 }
 
 div {
@@ -213,7 +218,7 @@ tr:nth-child(even) td {
 
 /* Hover effects for table rows */
 tr:hover td {
-  background-color: #8862cf; /* Dark orange on hover */
+  background-color: #8862cf; /* lavender on hover */
   color: #fff; /* White text on hover */
 }
 
@@ -235,15 +240,13 @@ tr:hover td {
 }
 
 /* Asides for explanation text and examples */
-.side-by-side {
+.tab-content div.side-by-side {
   display: flex; /* Keeps the container as a flexbox */
-  gap: 20px; /* Adds space between the elements */
-  align-items: flex-start;
+  gap: 20px; /* Adds space between the aside and main content */
 }
 
-.side-by-side p {
-  flex: 1; /* Makes the paragraphs take equal space */
-  max-width: 100%; /* Allows more space for the main paragraph */
+.tab-content div.side-by-side > div{
+flex: 1; /* Makes the aside and main content take up equal space */
 }
 
 .example-text {
@@ -257,17 +260,20 @@ tr:hover td {
 }
 
 main {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* Styling the nav element */
 
+a {
+  color: var(--light-orange-text);
+}
+
 .sticky-nav {
   color: var(--light-orange-text);
-  text-decoration: none;
   display: flex;
-  gap: 30px;
+  gap: 15px;
   background-color: var(--lighter-blue-overlay);
   position: sticky;
   top: 0;
@@ -283,4 +289,45 @@ main {
 
 .sticky-nav a:visited {
   color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Equipment Table */
+
+td.left-align {
+  text-align: left;
+}
+
+td.side-by-side {
+  display: flex; /* Keeps the container as a flexbox */
+  gap: 5px; /* Adds space between the aside and main content */
+}
+
+td.side-by-side table {
+  width: 100%;
+}
+
+td.side-by-side div {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.equipment-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+}
+
+.equipment-nav.active {
+  display: block; /* Show when the section is in view */
 }

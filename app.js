@@ -40,3 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("scroll", function () {
+  var equipmentCharts = document.getElementById("equipment-charts");
+  var equipmentNav = document.querySelector(".equipment-nav");
+
+  var rect = equipmentCharts.getBoundingClientRect();
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    // Equipment charts are in view
+    equipmentNav.classList.add("active");
+  } else {
+    // Equipment charts are not in view
+    equipmentNav.classList.remove("active");
+  }
+});

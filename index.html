@@ -26,43 +26,53 @@
       <div id="center-display">
         <section id="equipment" class="tab-content">
           <nav class="sticky-nav">
-            <p><a href="#armor-class-text">Armor Class</a></p>
-            <p><a href="#damage-reduction-explanation">Damage Reduction</a></p>
+            <p><a href="#">Armor Class</a></p>
+            <p><a href="#">Damage Reduction</a></p>
             <p><a href="#armor-and-weapon-table-container">Armor and Weapons Charts</a></p>
             <p><a href="#equipment-charts">Equipment Charts</a></p>
           </nav>
           <h2>Weapons and Armor</h2>
-          <h4 id="armor-class-explanation">Armor Class</h4>
-          <img src="armor-class.jpg" alt="Image: Armor Class Example" />
+          <div><p>Weapons and armor are the bread and butter of the adventurer's toolkit.</p></div>
           <div class="side-by-side">
-            <p>
-              Each single source of physical damage must deal damage greater than the Armor Class or the damage is negated. Armor
-              Class does NOT reduce damage, ever, so if a source of damage exceeds the Armor Class, the full damage is applied to
-              the creature.
-            </p>
-            <p class="example-text">
-              As the goblin horde descends on the gnome PC, Lykaia in her werewolf form throws herself over the gnome’s body and
-              curls into a ball to protect her. The goblins hack at Lykaia’s hide, hitting automatically because Lykaia is making
-              no move to defend herself. However, Lykaia’s werewolf hide has an AC of 6. The goblins deal 3, 3, 3, 4, 5, 5, and 6
-              damage. Lykaia shrugs off the first six attacks, but the seventh bites deep enough to harm her.
-            </p>
-          </div>
-          <h4 id="damage-reduction-explanation">Damage Reduction</h4>
-          <img src="damage-reduction.jpg" alt="Image: Damage Reduction Example" />
-          <div class="side-by-side">
-            <p>
-              Each single source of bludgeoning, piercing, and slashing damage that is not negated by the target’s Armor Class is
-              reduced by the armor’s Damage Reduction. Leftover damage is subtracted from the target’s Stamina/Health. DR is
-              always equal to or lower than AC.
-            </p>
-            <p class="example-text">
-              Keeping with the example above, Lykaia’s werewolf hide has a DR of 4, so even though the goblin managed to break
-              through her AC and hurt her, the 6 damage is reduced by 4 to 2. Her Stamina (if she has any left) is reduced by 2,
-              and any leftover damage reduces her Health.
-            </p>
+            <div class="tab-content-section">
+              <div class="side-by-side">
+                <h4>Armor Class (AC)</h4>
+              </div>
+              <div>
+                <p>
+                  Each single source of physical damage must deal damage greater than the Armor Class or the damage is negated.
+                  Armor Class does NOT reduce damage, ever, so if a source of damage exceeds the Armor Class, the full damage is
+                  applied to the creature.
+                </p>
+                <p class="example-text">
+                  EXAMPLE: As the goblin horde descends on the gnome PC, Lykaia in her werewolf form throws herself over the
+                  gnome’s body and curls into a ball to protect her. The goblins hack at Lykaia’s hide, hitting automatically
+                  because Lykaia is making no move to defend herself. However, Lykaia’s werewolf hide has an AC of 6. The goblins
+                  deal 3, 3, 3, 4, 5, 5, and 6 damage. Lykaia shrugs off the first six attacks, but the seventh bites deep enough
+                  to harm her.
+                </p>
+              </div>
+            </div>
+            <div class="tab-content-section">
+              <div class="side-by-side">
+                <h4>Damage Reduction (DR)</h4>
+              </div>
+              <div>
+                <p>
+                  Each single source of bludgeoning, piercing, and slashing damage that is not negated by the target’s Armor Class
+                  is reduced by the armor’s Damage Reduction. Leftover damage is subtracted from the target’s Stamina/Health. DR
+                  is always equal to or lower than AC.
+                </p>
+                <p class="example-text">
+                  EXAMPLE: Continuing from the example above, Lykaia’s werewolf hide has a DR of 4, so even though the goblin
+                  managed to break through her AC and hurt her, the 6 damage is reduced by 4 to 2. Her Stamina (if she has any
+                  left) is reduced by 2, and any leftover damage reduces her Health.
+                </p>
+              </div>
+            </div>
           </div>
           <div id="armor-and-weapon-table-container">
-            <div class="table-wrap">
+            <div class="table-wrap tab-content-section">
               <h3>Armor</h3>
               <table id="armor-table">
                 <tr>
@@ -116,7 +126,7 @@
                 </tr>
               </table>
             </div>
-            <div class="table-wrap">
+            <div class="table-wrap tab-content-section">
               <h3>Weapon Groups</h3>
               <table id="weapon-group-table">
                 <tr>
@@ -181,6 +191,107 @@
           </div>
 
           <h2 id="equipment-charts">Equipment</h2>
+          <div class="tab-content-section">
+            <table id="equipment-table">
+              <tr>
+                <th colspan="20">Miscellaneous Equipment</th>
+              </tr>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Weight (slots)</th>
+                <th>Cost (sp)</th>
+              </tr>
+              <tr>
+                <td>Surgery Bag</td>
+                <td class="left-align">
+                  <div>
+                    A surgery bag contains bandages, basic poultices and purgatives, fresh willow bark, a jar of honey, a jar of
+                    cobweb, tins of moss, a jar of live leeches, splints, catgut suitable for stitches, hooks and needles, and a
+                    small terrarium with 3 large snails.
+                  </div>
+                  <div>
+                    As an ACTION, the holder can attempt to remove the Bleeding Out Condition from a living creature. The Test DC
+                    is equal to ½ the DC of the creature’s most recent saving throw against Bleeding Out.
+                  </div>
+                  <div>A standard Surgery Bag has 10 uses. Uses can be restored for 8 sp / use in most civilized places.</div>
+                </td>
+                <td>3</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Alchemy Bag</td>
+                <td class="left-align side-by-side">
+                  <div>
+                    <div>
+                      An Alchemy Bag is a large bag lined with pockets and compartments. It contains a wide variety of liquid,
+                      solid, and powdered acids, bases, reagents, and catalysts, a set of small weights and a balanced scale,
+                      empty leather bottles, jars, glass vials, corks, an assortment of herbs and toxins, charcoal, wax, glass
+                      droppers, and several small tins of flammable jelly or rendered fat.
+                    </div>
+                    <div>
+                      The Alchemy Bag has 5 qualities of Alchemical Component, each of which has its own number of uses and cost
+                      of restoring each use. A higher quality Component can be used to substitute for a lower-order one at a rate
+                      of 5 x the difference in their quality (e.g. 1 Advanced Component can substitute for 5 Basic).
+                    </div>
+                  </div>
+                  <table>
+                    <tr>
+                      <th>Quality</th>
+                      <th>Uses</th>
+                      <th>Cost per Use</th>
+                    </tr>
+                    <tr>
+                      <td>Basic</td>
+                      <td>30</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Advanced</td>
+                      <td>20</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>Complex</td>
+                      <td>10</td>
+                      <td>80</td>
+                    </tr>
+                    <tr>
+                      <td>Rare</td>
+                      <td>6</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Legendary</td>
+                      <td>3</td>
+                      <td>600</td>
+                    </tr>
+                  </table>
+                </td>
+                <td>3</td>
+                <td>200 sp + cost of Components</td>
+              </tr>
+              <tr>
+                <td>Qoyaa-Scrollcrafting Case</td>
+                <td class="left-align">
+                  <div>
+                    A Scrollcrafting Case is a 24” x 24” x 2” wooden case with a Superior complexity lock. It contains a compass,
+                    ruler, 5 superb-quality quill-pens, 5 jars of high-quality, enchanted ink, 5 specially-prepared
+                    <span class="italic">lacunae</span>, paper-weights, a large bag of course sand, and a set of materials
+                    specific to the Qoyaa order (e.g. For the Rite of Stars, a series of star charts of the Old North).
+                  </div>
+                  <div>
+                    A Scrollcrafting Case expends 1 <span class="italic">lacuna</span> per Scroll made, and a jar of ink and a
+                    quill-pen per 5 Scrolls made. Unlike other kits, the materials in a Qoyaa-Scrollcrafting Case are not
+                    available for sale anywhere. Either you must requisition them as a member of a Qoyaa order, such as the Rite
+                    of Stars or the Imperial Legion, or you must steal them.
+                  </div>
+                </td>
+                <td>3</td>
+                <td>NA</td>
+              </tr>
+            </table>
+          </div>
         </section>
 
         <section id="combat" class="tab-content">
@@ -229,7 +340,7 @@
 
           <div class="accordion">
             <button class="accordion-button">Network Rolls</button>
-            <div class="accordion-content">
+            <div class="accordion-content" style="display: block">
               <p>
                 Each Downtime period, the Network can be directed to focus on a specific task – Build, Forage, Defend, etc. To
                 determine its level of success, the Networker rolls a d20, adds and subtracts bonuses and penalties, and compares
@@ -238,12 +349,12 @@
             </div>
 
             <button class="accordion-button">Network Aspects</button>
-            <div class="accordion-content">
+            <div class="accordion-content" style="display: block">
               <p>The Network has four attributes: Boon, Bane, Population, and Supply.</p>
             </div>
 
             <button class="accordion-button">Managing the Network</button>
-            <div class="accordion-content">
+            <div class="accordion-content" style="display: block">
               <p>
                 Players must maintain the Network’s stability, ensuring its people are safe and its resources are properly
                 allocated.
@@ -253,6 +364,11 @@
         </section>
       </div>
     </main>
+    <nav id="equipment-nav">
+      <a>bags and packs</a>
+      <a>potions</a>
+      <a>survival equipment</a>
+    </nav>
 
     <footer>
       <p>Made by [Joshua Kelly]</p>
