@@ -42,15 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("scroll", function () {
-  var equipmentCharts = document.getElementById("equipment-charts");
-  var equipmentNav = document.querySelector(".equipment-nav");
+  var equipmentCharts = document.getElementById("equipment-table");
+  var equipmentNav = document.getElementById("equipment-nav");
 
   var rect = equipmentCharts.getBoundingClientRect();
   if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+    console.log("I see it, I see it!");
     // Equipment charts are in view
-    equipmentNav.classList.add("active");
+    equipmentNav.style.display = "block";
   } else {
     // Equipment charts are not in view
-    equipmentNav.classList.remove("active");
+    equipmentNav.style.display = "none";
   }
 });
