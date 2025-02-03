@@ -331,3 +331,10 @@ td.side-by-side div {
 .equipment-nav.active {
   display: block; /* Show when the section is in view */
 }
+
+.centered-heading {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
