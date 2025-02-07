@@ -591,32 +591,203 @@
             people and it needs Ground that is its own.
           </div>
 
-          <div>
-            <span class="bold">Network Rolls</span>. Each Downtime period, the Network can be directed to focus on a specific task
-            – Build, Forage, Defend, etc. To determine its level of success, the Networker rolls a d20, adds and subtracts bonuses
-            and penalties, and compares it to a DC. A success might produce Supply, mitigate a Crisis, or provide some other
-            bonus.
-          </div>
-
-          <div>Network Aspects. The Network has four attributes: Boon, Bane, Population, and Supply.</div>
-
           <div class="accordion">
             <button class="accordion-button">Network Rolls</button>
-            <div class="accordion-content" style="display: block">
-              <p>
+            <div class="accordion-content" style="display: none">
+              <div>
                 Each Downtime period, the Network can be directed to focus on a specific task – Build, Forage, Defend, etc. To
                 determine its level of success, the Networker rolls a d20, adds and subtracts bonuses and penalties, and compares
                 it to a DC. A success might produce Supply, mitigate a Crisis, or provide some other bonus.
-              </p>
+              </div>
+              <div>
+                By default, the Network only gets one Network roll per Downtime, but the number of rolls can be increased by
+                creating Network Branches, each of which gets its own roll.
+              </div>
             </div>
 
             <button class="accordion-button">Network Aspects</button>
-            <div class="accordion-content" style="display: block">
+            <div class="accordion-content" style="display: none">
               <p>The Network has four attributes: Boon, Bane, Population, and Supply.</p>
+              <button class="accordion-button">Boons</button>
+              <div class="accordion-content" style="display: none">
+                <div>
+                  The Boon can take many forms and represents what the PCs mean to the Network – what the Network invests in the
+                  PCs. The default Boon is Hope, but in a campaign of skullduggery and deception, the Network Boon might be
+                  “Discretion,” “Veil,” or “Rumor.” In a campaign centered around a warcamp, the Boon could be “Might” or “Chain
+                  of Command.”
+                </div>
+                <div>
+                  PCs can “spend” the Network’s Boon to gain benefits while the party is pursuing a goal on behalf of the Network.
+                  The nature of the Boon determines the ways the PCs can use it.
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Spending Hope</span>. When spending hope, the player must invent and
+                  describe a powerful, specific hope their character has for the future or a scene or experience their character
+                  has had with the Network and/or members of it which rejuvenates them in this moment.
+                </div>
+                <div>
+                  <table>
+                    <tr>
+                      <th colspan="2">Spending Hope</th>
+                    </tr>
+                    <tr>
+                      <th class="th-mid-level">For 1 Hope a PC (or NPC is the party allows it) can:</th>
+                    </tr>
+                    <tr>
+                      <td>Re-roll a failed Saving Throw</td>
+                    </tr>
+                    <tr>
+                      <td>Regain 1d6 Stamina</td>
+                    </tr>
+                    <tr>
+                      <td>Gain 1 Grit (up to max)</td>
+                    </tr>
+                    <tr>
+                      <td>Give another creature disadvantage on a Saving Throw</td>
+                    </tr>
+                    <tr>
+                      <td>When regain 1 or more Health, regain an additional +1 Health</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        For 5 Hope, the party can prevent one point of Horror that the Network would otherwise have gained. Hope
+                        cannot be spent to retroactively remove an already-gained Horror; the call must be made immediately when
+                        the Horror is gained.
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Gaining Hope</span>: The Network gains 1d4 Hope per PC when the
+                  Network is created. Otherwise it gains hope from the following sources:
+                  <table>
+                    <tr>
+                      <th colspan="5">Gaining Hope</th>
+                    </tr>
+                    <tr>
+                      <th class="th-mid-level">Source</th>
+                      <th class="th-mid-level">Amount</th>
+                    </tr>
+                    <tr>
+                      <td>Last Stand</td>
+                      <td>1 + the number of party members</td>
+                    </tr>
+                    <tr>
+                      <td>Certain Downtime actions: stories, feasts, triumphant returns</td>
+                      <td>varies</td>
+                    </tr>
+                    <tr>
+                      <td>Resolving a Crisis</td>
+                      <td>1d4 / surviving party member</td>
+                    </tr>
+                  </table>
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Losing Hope</span>:
+                  <table>
+                    <tr>
+                      <th colspan="5">Losing Hope</th>
+                    </tr>
+                    <tr>
+                      <th class="th-mid-level">Cause</th>
+                      <th class="th-mid-level">Loss</th>
+                    </tr>
+                    <tr>
+                      <td>When a PC spends it</td>
+                      <td>(see above)</td>
+                    </tr>
+                    <tr>
+                      <td>When a PC dies (unless it was a last stand)</td>
+                      <td>- (the PC's contribution to the Maximum Hope + 1d4)</td>
+                    </tr>
+                    <tr>
+                      <td>Failing to resolve a Crisis</td>
+                      <td>-1d4 / party member</td>
+                    </tr>
+                    <tr>
+                      <td>When the Network gains a Horror</td>
+                      <td>-1 Hope / Horror gained</td>
+                    </tr>
+                    <tr>
+                      <td>Each time the Network takes damage from a Crisis</td>
+                      <td>-1 / damage die taken</td>
+                    </tr>
+                  </table>
+                </div>
+                <div>If the Network’s Hope is ever reduced to 0, it immediately suffers an Internal Crisis.</div>
+                <div>
+                  <span class="bold italic light-orange-text">Maximum Hope</span>. The Network’s maximum Hope is determined by the
+                  PCs’ depth of involvement and level of commitment. Each PC contributes to the Network’s maximum Hope with the
+                  following guidelines:
+                </div>
+                <div>
+                  <table>
+                    <tr>
+                      <th colspan="5">PC Contribution to Maximum Hope</th>
+                    </tr>
+                    <tr>
+                      <th class="th-mid-level">PC Relationship to Network</th>
+                      <th class="th-mid-level">Maximum Hope</th>
+                    </tr>
+                    <tr>
+                      <td>PC is a member of the Network and contributes positively in Crises</td>
+                      <td>+1</td>
+                    </tr>
+                    <tr>
+                      <td>PC holds some kind of officer-rank in the Network or one of its Branches</td>
+                      <td>+2</td>
+                    </tr>
+                    <tr>
+                      <td>PC is the leader of a Branch of the Network</td>
+                      <td>+3</td>
+                    </tr>
+                    <tr>
+                      <td>PC is a member of the ruling council in the Network</td>
+                      <td>+4</td>
+                    </tr>
+                    <tr>
+                      <td>PC is the sole ruler, the single highest authority</td>
+                      <td>+10</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <button class="accordion-button">Banes</button>
+              <div class="accordion-content" style="display: none">Testing accordion content.</div>
+              <button class="accordion-button">Population</button>
+              <div class="accordion-content" style="display: none"></div>
+              <button class="accordion-button">Supply</button>
+              <div class="accordion-content" style="display: none">
+                <div>
+                  Supply is an abstraction of the food, clothing, equipment, and general surplus produced by the Network for its
+                  use. Supply refers specifically to the surplus produced by the Population and is separate from day-to-day use
+                  and consumption.
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Supply and Crises</span>. When the Network suffers from a Crisis,
+                  the Crisis deals damage to the Supply each week or month that the Crisis is not resolved. The damage usually
+                  ranges from 1d6 – 4d6 per Crisis. If the Network has zero Supply and takes damage, or if there is leftover
+                  damage from the Crisis that reduced Supply to zero, the damage is dealt directly to the Population.
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Losing Supply</span>. Supply can be traded with groups outside the
+                  Network or spent internally to create general improvements within the Network – e.g. build more houses, extend
+                  farmland, etc.
+                </div>
+                <div>
+                  <span class="bold italic light-orange-text">Special Supplies</span>. Some Networks have special Supply which
+                  they have access to that is particularly valuable or sought after by forces outside the Network. These could be
+                  as mundane as Stone Supply or Timber Supply, or as dangerous and mysterious as Qoyaa Research.
+                </div>
+                <div>
+                  Special supplies can be traded for great wealth, or used internally to improve the Network itself in
+                  highly-specialized ways – building better fortifications, researching a brand new spell, etc.
+                </div>
+              </div>
             </div>
 
             <button class="accordion-button">Managing the Network</button>
-            <div class="accordion-content" style="display: block">
+            <div class="accordion-content" style="display: none">
               <p>
                 Players must maintain the Network’s stability, ensuring its people are safe and its resources are properly
                 allocated.
