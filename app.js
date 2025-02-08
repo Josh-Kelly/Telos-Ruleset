@@ -55,3 +55,29 @@ document.addEventListener("scroll", function () {
     equipmentNav.style.display = "none";
   }
 });
+
+document.getElementById("add-branch-btn").addEventListener("click", function () {
+  console.log("Hello");
+
+  // Create input field
+  const newInput = document.createElement("input");
+  newInput.type = "text";
+  newInput.name = "network-branch";
+  newInput.placeholder = "Branch Name";
+
+  // Create minus button
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "−"; // Minus symbol
+  removeBtn.style.marginLeft = "5px"; // Small space between input and button
+  removeBtn.addEventListener("click", function () {
+    newTd.remove(); // Remove the <td> when clicked
+  });
+
+  // Create new <td> and append input and button
+  const newTd = document.createElement("td");
+  newTd.appendChild(newInput);
+  newTd.appendChild(removeBtn);
+
+  // Append new <td> to <tr id="network-branches">
+  document.getElementById("network-branches").appendChild(newTd);
+});

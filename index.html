@@ -14,15 +14,104 @@
       <h1>Telos Rules</h1>
     </header>
     <div class="tabs">
-      <button class="tab-button" data-tab="main">Main</button>
+      <button class="tab-button" data-tab="deepsele">Deepsele</button>
       <button class="tab-button" data-tab="equipment">Equipment</button>
       <button class="tab-button" data-tab="networks">Networks</button>
       <button class="tab-button" data-tab="inventory">Inventory</button>
+      <button class="tab-button" data-tab="book-of-the-fallen">Book of the Fallen</button>
     </div>
 
     <main>
       <div id="center-display">
-        <section id="main" class="tab-content"></section>
+        <section id="deepsele" class="tab-content">
+          <div>
+            <img src="images/deepsele-post-demons.png" alt="Deepsele" />
+          </div>
+          <div>
+
+            <table width="100%" class="network-branch-table">
+              <tr>
+                <td colspan="6">
+                  <label for="network-name-input">Network Name: </label>
+                  <input type="text" id="network-name-input" name="network-name-input" />
+                  <button id="add-branch-btn">Add Branch</button>
+                </td>
+              </tr>
+              <tr id="network-branches">
+                <td>
+                  <input type="text" name="first-network-branch" placeholder="Branch Name"/>
+                </td>
+                <td>
+                  <input type="text" name="first-network-branch" placeholder="Branch Name"/>
+                </td>
+                <td>
+                  <input type="text" name="first-network-branch" placeholder="Branch Name"/>
+                </td>
+                <td>
+                  <input type="text" name="first-network-branch" placeholder="Branch Name"/>
+                </td>
+              </tr>
+            </table>
+
+            <table width="100%" class="network-branch-table">
+              <tr>
+                <td width="33%">
+                  <div class="side-by-side">
+                    <div>
+                      <p>Hope</p>
+                        <input type="number" class="square-input" id="boon-input" name="boon-input"/>
+                    </div>
+                    <div>
+                      <p>Horror</p>
+                        <input type="number" class="square-input" id="bane-input"  name="bane-input"/>
+                    </div>
+                  </div>
+                </td>
+                <td rowspan="2">
+                  <input type="text" name="network-allies-input" class="fill-container-input"/>
+                </td>
+              </tr>
+              <tr>
+                <td width="33%">
+                  <div class="side-by-side">
+                    <div>
+                      <p>Population</p>
+                        <input type="number" class="rectangle-input" id="population-input" name="population-input"/>
+                    </div>
+                    <div>
+                      <p>Supply</p>
+                        <input type="number" class="rectangle-input" id="supply-input"  name="supply-input"/>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="network-branch-table">
+                <tr>
+                  <td colspan="6"></td>
+                </tr>
+              </tr>
+              <tr>
+                <td colspan="20" class="centered-heading">Special Resources</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="4" rowspan="2"></td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="4"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="4"></td>
+              </tr>
+            </table>
+          </div>
+        </section>
 
         <section id="equipment" class="tab-content">
           <nav class="sticky-nav">
@@ -1232,6 +1321,27 @@
               </tr>
             </table>
           </div>
+        </section>
+
+        <section id="book-of-the-fallen" class="tab-content">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Fate and Resting Place</th>
+            </tr>
+            <tr>
+              <td>Fenrir</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Keir Alstrom</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Wilhelm</td>
+              <td></td>
+            </tr>
+          </table>
         </section>
       </div>
     </main>

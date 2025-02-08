@@ -386,3 +386,67 @@ li {
 .light-orange-text {
   color: var(--light-orange-text)
 }
+
+img {
+  width: 100%;
+}
+
+.network-branch-table {
+  margin-bottom: 25px;
+}
+
+/* Styling Network inputs */
+
+.square-input {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box; /* Ensures padding and borders don't overflow */
+  padding: 10px;
+  font-size: 12px;
+  text-align: center; /* Centers text horizontally */
+  line-height: 100px; /* Centers text vertically, set to match the height */
+  font-size: 30px;
+}
+
+/* Remove the up and down buttons (spinner) for number input inside .square-input */
+.square-input[type="number"]::-webkit-outer-spin-button,
+.square-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.square-input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: textfield; /* For modern browsers */
+}
+
+.rectangle-input {
+  width: 120px;
+  height: 40px;
+  box-sizing: border-box; /* Ensures padding and borders don't overflow */
+  padding: 10px;
+  font-size: 12px;
+  text-align: center; /* Centers text horizontally */
+  line-height: 100px; /* Centers text vertically, set to match the height */
+  font-size: 30px;
+}
+
+/* Remove the up and down buttons (spinner) for number input inside .rectangle-input */
+.rectangle-input[type="number"]::-webkit-outer-spin-button,
+.rectangle-input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rectangle-input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: textfield; /* For modern browsers */
+}
+
+.fill-container-input {
+  width: 1000%;
+  height: 1000%;
+  box-sizing: border-box; /* Ensures padding and borders don't overflow */
+  padding: 10px;
+  font-size: 12px;
+}
