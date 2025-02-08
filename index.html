@@ -16,10 +16,8 @@
     <div class="tabs">
       <button class="tab-button" data-tab="main">Main</button>
       <button class="tab-button" data-tab="equipment">Equipment</button>
-      <button class="tab-button" data-tab="combat">Combat</button>
-      <button class="tab-button" data-tab="skills">Skills</button>
-      <button class="tab-button" data-tab="classes">Classes</button>
       <button class="tab-button" data-tab="networks">Networks</button>
+      <button class="tab-button" data-tab="inventory">Inventory</button>
     </div>
 
     <main>
@@ -556,23 +554,8 @@
           </div>
         </section>
 
-        <section id="combat" class="tab-content">
-          <h2>Combat Rules</h2>
-          <p>Combat in [Your TTRPG Name] is resolved using the following mechanics...</p>
-        </section>
-
-        <section id="skills" class="tab-content">
-          <h2>Skills</h2>
-          <p>Here are the skills available to your character...</p>
-        </section>
-
-        <section id="classes" class="tab-content">
-          <h2>Character Classes</h2>
-          <p>Choose your class from the following options...</p>
-        </section>
-
         <section id="networks" class="tab-content">
-          <h2 class="bold">Networks</h2>
+          <h2 class="bold centered-heading">Networks</h2>
 
           <div>
             The Network is the party’s home base, haven, and fallback point. It is probably where many character loved ones live,
@@ -1045,6 +1028,209 @@
                 allocated.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section id="inventory" class="tab-content">
+          <h2 class="bold centered-heading">Encumbrance & Inventory</h2>
+
+          <div>
+            <span class="bold italic light-orange-text">Abstracted Weight and Size</span>. Tracking weight is tedious and dull.
+            Telos mostly ignores the weight of the items that you carry and instead measures your carrying capacity by slots,
+            which are an abstraction of an item’s size and weight. Your maximum slot capacity is determined first by your size and
+            then by your Strength. Each item you carry costs a certain number of slots.
+          </div>
+
+          <div>
+            <span class="bold italic light-orange-text">Carrying Capacity</span>. A creature’s carrying capacity is determined by
+            its size and Might Save.
+          </div>
+
+          <div>
+            <table>
+              <tr>
+                <th colspan="3">Carrying Capacity</th>
+              </tr>
+              <tr>
+                <th class="th-mid-level">Creature Size</th>
+                <th class="th-mid-level">Carrying Capacity</th>
+                <th class="th-mid-level">Bonus</th>
+              </tr>
+              <tr>
+                <td>Miniscule</td>
+                <td>0</td>
+                <td rowspan="6">0 + ½ Might Save Bonus (but not penalty), rounded up</td>
+              </tr>
+              <tr>
+                <td>Tiny</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Small</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Large</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Huge</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Gargantuan</td>
+                <td>For most practical purposes: infinite</td>
+                <td>NA</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <span class="bold italic light-orange-text">Default Containers</span>. Each item in the world takes up a certain
+            number of slots. The exceptions are your money bag, waterskin, and ration box, each of which can hold a set amount of
+            food, water, and coin respectively without taking up any slots. Food, water, and coin past that set amount does take
+            up slots.
+          </div>
+          <div>
+            <table>
+              <tr>
+                <th colspan="2">Default Containers</th>
+              </tr>
+              <tr>
+                <th class="th-mid-level">Default Container</th>
+                <th class="th-mid-level">Capacity</th>
+              </tr>
+              <tr>
+                <td>Ration Box</td>
+                <td>5 days of food rations</td>
+              </tr>
+              <tr>
+                <td>Waterskin</td>
+                <td>5 days of water rations (assuming temperate climate)</td>
+              </tr>
+              <tr>
+                <td>Coinpurse</td>
+                <td>100 assorted coins</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <span class="bold italic light-orange-text">Size and Slots</span>. The size of an item determines how many slots it
+            takes up in your inventory.
+          </div>
+          <div>
+            <table>
+              <tr>
+                <th colspan="3">Size and Slots</th>
+              </tr>
+              <tr>
+                <th class="th-mid-level">Size Category</th>
+                <th class="th-mid-level">Description</th>
+                <th class="th-mid-level">Slots</th>
+              </tr>
+              <tr>
+                <td>Tiny</td>
+                <td>Can hold several in one hand</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>Small</td>
+                <td>Short length, approximately 9", held comfortably with one hand</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td>Medium length, approximately 2', held with one hand</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Large</td>
+                <td>Longer than an arm, requires one or two hands to hold</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Extra-large</td>
+                <td>Requires most of your strength and concentration to manage</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Huge</td>
+                <td>Extremely awkward or heavy, manageable only for a short time</td>
+                <td>10</td>
+              </tr>
+            </table>
+          </div>
+
+          <div>
+            <span class="bold italic light-orange-text">Armor and Slots</span>. A worn piece of armor is designed to be fitting
+            and not in the way, and thus only its weight matters. An unworn suit of armor is awkward to carry and occupies more
+            Slots.
+          </div>
+          <div>
+            <table>
+              <tr>
+                <th colspan="3">Size and Slots</th>
+              </tr>
+              <tr>
+                <th class="th-mid-level">Armor</th>
+                <th class="th-mid-level">Slots (worn)</th>
+                <th class="th-mid-level">Slots (carried)</th>
+              </tr>
+              <tr>
+                <td>Light</td>
+                <td>0</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td>1</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Heavy</td>
+                <td>3</td>
+                <td>6</td>
+              </tr>
+            </table>
+          </div>
+          <div><span class="bold italic light-orange-text">Weapons and Slots</span>. Like armor, weapons take up Slots.</div>
+          <div>
+            <table>
+              <tr>
+                <th colspan="3">Weapons and Slots</th>
+              </tr>
+              <tr>
+                <th class="th-mid-level">Armor</th>
+                <th class="th-mid-level">Slots (worn)</th>
+                <th class="th-mid-level">Slots (carried)</th>
+              </tr>
+              <tr>
+                <td>Dart, sling</td>
+                <td>Tiny</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>Blowgun, hand crossbow, dagger, light hammer, net, sickle, whip</td>
+                <td>Small</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Club, light crossbow, flail, handaxe, mace, morningstar, rapier, scimitar, shortbow, shortsword, war pick</td>
+                <td>Medium</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>
+                  Battleaxe, heavy crossbow, glaive, greataxe, greatclub, greatsword, halberd, javelin, lance, longbow, longsword,
+                  maul, pike, quarterstaff, spear, trident, warhammer
+                </td>
+                <td>Large</td>
+                <td>3</td>
+              </tr>
+            </table>
           </div>
         </section>
       </div>
