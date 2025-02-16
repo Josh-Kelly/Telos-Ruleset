@@ -81,3 +81,5 @@ document.getElementById("add-branch-btn").addEventListener("click", function () 
   // Append new <td> to <tr id="network-branches">
   document.getElementById("network-branches").appendChild(newTd);
 });
+
+function createSpellCharts() {}

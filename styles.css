@@ -450,3 +450,11 @@ img {
   padding: 10px;
   font-size: 12px;
 }
+
+.spell-table .left-align p {
+  text-align: left;
+}
+
+.spell-table .left-align li {
+  text-align: left;
+}
