@@ -462,11 +462,11 @@ img {
 /* Styling Talent Cards */
 
 /* Talent Cards Container */
-.tab-content .talent-cards-container {
+.talent-cards-container {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+  flex-wrap: wrap; /* Allow cards to wrap onto a new line */
   justify-content: space-between; /* Space between the cards */
-  gap: 5px; /* Add spacing between cards */
+  gap: 40px; /* Add spacing between cards */
   margin: 20px auto; /* Center the container */
   max-width: 100%;
   padding: 10px;
@@ -480,8 +480,8 @@ img {
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box; /* Ensure padding is included in width calculations */
-  flex: 1 0 calc(50% - 20px); /* Force cards to take up 50% of the container width, minus gap */
-  max-width: calc(50% - 20px); /* Prevent the card from growing larger than 50% */
+  flex: 1 0 calc(50% - 10px); /* Force cards to take up 50% of the container width */
+  max-width: calc(50% - 10px); /* Prevent the card from growing larger than 50% */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -495,7 +495,6 @@ img {
 /* Talent Card Title */
 .talent-card h3 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5em;
   color: var(--light-orange-text);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   margin-bottom: 10px;
@@ -503,49 +502,23 @@ img {
 
 /* Talent Card Description */
 .talent-card p {
-  line-height: 1.5;
+  line-height: 1.8;
   color: var(--light-grey-text);
   font-size: 1.1em;
 }
 
-/* Talent Card Description */
-.talent-card h4 {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.5;
-  color: var(--light-grey-text);
-  font-size: 1.1em;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  font-weight: bold;
+/* Talent Card Header Icon (Optional) */
+.talent-card .card-icon {
+  font-size: 2em;
+  color: var(--light-orange-text);
+  margin-bottom: 10px;
+  display: inline-block;
 }
-
-
 
 /* Responsiveness for smaller screens */
 @media (max-width: 768px) {
-  .talent-cards-container {
-    justify-content: space-evenly; /* Ensure cards are evenly spaced in the container */
-  }
   .talent-card {
-    flex: 1 0 calc(50% - 10px); /* Keep the cards at 50% width */
-    max-width: calc(50% - 10px); /* Keep the cards at 50% width */
+    width: 100% !important; /* Force cards to stack on smaller screens */
+    max-width: 100% !important;
   }
 }
-
-/* Ensure h4 and p inside each span are inline */
-.inline-children h4,
-.inline-children p {
-  display: inline;  /* Keep h4 and p inline within the span */
-  margin: 0;
-  padding: 0;
-}
-
-/* Stacks the spans vertically but keeps their children inline */
-.single-space-children > * {
-  display: block;   /* Make sure the spans inside are stacked vertically */
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
-

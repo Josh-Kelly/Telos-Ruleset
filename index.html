@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Telos Rules</title>
+    <title>Telos Ruleset</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <h1>Telos Rules</h1>
+      <h1>Telos Ruleset</h1>
     </header>
     <div class="tabs">
+      <button class="tab-button" data-tab="talents">Talents</button>
       <button class="tab-button" data-tab="deepsele">Deepsele</button>
       <button class="tab-button" data-tab="equipment">Equipment</button>
       <button class="tab-button" data-tab="networks">Networks</button>
@@ -21,10 +22,20 @@
       <button class="tab-button" data-tab="magic">Magic</button>
       <button class="tab-button" data-tab="classes">Classes</button>
       <button class="tab-button" data-tab="book-of-the-fallen">Book of the Fallen</button>
+      <button class="tab-button" data-tab="bestiary">Bestiary</button>
+      
     </div>
 
     <main>
       <div id="center-display">
+        <section id="talents" class="tab-content">
+          <div>
+            <div class="talent-cards-container" id="talent-cards-container">
+              <!-- app.js adds Cards here -->
+            </div>
+          </div>
+          
+        </section>
         <section id="deepsele" class="tab-content">
           <div>
             <img src="images/deepsele-post-demons.png" alt="Deepsele" />
@@ -1470,6 +1481,11 @@
 
         <section id="magic" class="tab-content">
         </section>
+
+        <section id="bestiary" class="tab-content">
+        </section>
+
+
       </div>
     </main>
 
