@@ -373,7 +373,7 @@ function createTalentCards() {
 
     // Create prerequisites
     const prerequisiteValue = document.createElement("p");
-    prerequisiteValue.textContent = talent.gritCost !== null ? `${talent.prerequisite}` : "None";
+    prerequisiteValue.textContent = talent.prerequisite !== null ? `${talent.prerequisite}` : "None";
     prerequisiteSpan.appendChild(prerequisiteValue);
 
     // Append elements to the headingDiv
