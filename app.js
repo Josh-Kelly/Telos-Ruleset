@@ -96,7 +96,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Armored Resilience",
+    name: "Armored Resilience [1 - 2]",
     prerequisite: null,
     gritCost: null,
     description:
@@ -106,7 +106,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Cleave",
+    name: "Cleave [1 - 3]",
     prerequisite: null,
     gritCost: 2,
     description:
@@ -126,7 +126,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Danger Sense",
+    name: "Danger Sense [1 - 7]",
     prerequisite: null,
     gritCost: "[variable]",
     description:
@@ -136,7 +136,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Dodge",
+    name: "Dodge [1 - 7]",
     prerequisite: "Small, Elf, or dexterity-related Trait",
     gritCost: "[variable]",
     description:
@@ -155,7 +155,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Favored Enemy",
+    name: "Favored Enemy [1 - 7]",
     prerequisite: null,
     gritCost: "[variable]",
     description:
@@ -166,7 +166,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "First Aid",
+    name: "First Aid [1 - 7]",
     prerequisite: null,
     gritCost: null,
     description:
@@ -176,7 +176,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Fortify Armor",
+    name: "Fortify Armor [1 - 2]",
     prerequisite: null,
     gritCost: null,
     description:
@@ -186,7 +186,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Intimidate",
+    name: "Intimidate [1 - 5]",
     prerequisite: null,
     gritCost: "[variable]",
     description: "Concentrate your presence into an aura, menacing shout, or other display of malevolent intent.",
@@ -197,7 +197,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Grittier",
+    name: "Grittier [1 - 2]",
     prerequisite: null,
     gritCost: null,
     description: "Gain an additional source of Grit generation from the list below.",
@@ -206,7 +206,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Improved Grit",
+    name: "Improved Grit [1 - 7]",
     prerequisite: null,
     gritCost: null,
     description: "Your maximum Grit permanently increases by 1.",
@@ -226,7 +226,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Rally",
+    name: "Rally [1 - 7]",
     prerequisite: null,
     gritCost: 2,
     description:
@@ -256,7 +256,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Riposte",
+    name: "Riposte [1 - 7]",
     prerequisite: null,
     gritCost: "[variable]",
     description:
@@ -266,7 +266,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Taunt",
+    name: "Taunt [1 - 7]",
     prerequisite: null,
     gritCost: "[variable]",
     description:
@@ -288,16 +288,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Stances",
-    prerequisite: null,
-    gritCost: "[variable]",
-    description: "You enter a Stance using your MOVEMENT. While in that Stance, you gain the benefits and costs of that Stance.",
-    descriptionRow2: "The Grit Cost of all Affected Talents is reduced by -1 (to a minimum of 1).",
-    descriptionRow3: null,
-    descriptionRow4: null,
-  },
-  {
-    name: "Weapon Mastery",
+    name: "Weapon Mastery [1 - 7]",
     prerequisite: null,
     gritCost: "[variable]",
     description: "While wielding this weapon, gain additional bonus to hit equal to the Grit you expend.",
@@ -306,7 +297,7 @@ const warriorTalents = [
     descriptionRow4: null,
   },
   {
-    name: "Weapon Specialty",
+    name: "Weapon Specialty [1 - 3]",
     prerequisite: null,
     gritCost: null,
     description: "Choose a weapon from a Weapon Type category, such as '2-Handed Swords' from the Sword Weapon Type.",
@@ -328,8 +319,8 @@ const warriorTalents = [
 ];
 
 // Function to create and insert talent cards
-function createTalentCards() {
-  const container = document.getElementById("talent-cards-container");
+function createWarriorTalentCards() {
+  const container = document.getElementById("warrior-talent-cards-container");
 
   warriorTalents.forEach((talent) => {
     // Create the card container
@@ -360,6 +351,7 @@ function createTalentCards() {
     // Create the Grit cost number
     const gritCostValue = document.createElement("p");
     gritCostValue.textContent = talent.gritCost !== null ? `${talent.gritCost}` : "N/A";
+    gritCostValue.classList.add("italic");
     gritCostSpan.appendChild(gritCostValue);
 
     // Create a span to keep prerequisite and prerequisite value inline
@@ -374,6 +366,7 @@ function createTalentCards() {
     // Create prerequisites
     const prerequisiteValue = document.createElement("p");
     prerequisiteValue.textContent = talent.prerequisite !== null ? `${talent.prerequisite}` : "None";
+    prerequisiteValue.classList.add("italic");
     prerequisiteSpan.appendChild(prerequisiteValue);
 
     // Append elements to the headingDiv
@@ -439,6 +432,10 @@ function createTalentCards() {
     // Append the card to the container
     container.appendChild(card);
   });
+}
+
+function createTalentCards() {
+  createWarriorTalentCards();
 }
 
 // Call the function to generate the cards on page load

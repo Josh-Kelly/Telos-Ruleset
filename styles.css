@@ -510,9 +510,9 @@ img {
 
 /* Talent Card Description */
 .talent-card h4 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Cormorant', serif;
   line-height: 1.5;
-  color: var(--light-grey-text);
+  color: var(--light-orange-faded);
   font-size: 1.1em;
   margin: 0px;
   padding: 0px;
