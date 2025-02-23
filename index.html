@@ -15,6 +15,7 @@
     </header>
     <div class="tabs">
       
+      <button class="tab-button" data-tab="crafting">Crafting</button>
       <button class="tab-button" data-tab="deepsele">Deepsele</button>
       <button class="tab-button" data-tab="equipment">Equipment</button>
       <button class="tab-button" data-tab="networks">Networks</button>
@@ -25,10 +26,118 @@
       <button class="tab-button" data-tab="bestiary">Bestiary</button>
       <button class="tab-button" data-tab="talents">Talents</button>
       
+      
     </div>
 
     <main>
       <div id="center-display">
+
+        <section id="crafting" class="tab-content">
+
+          <h2 class="bold centered-heading">Crafting</h2>
+
+          <div>
+            Crafting can be a fun side hustle or Downtime activity for any character with the right Skills, but it is a core mechanic for several classes, including: Scrollcrafter, Apothecary, Alchemist.
+          </div>
+
+          <div>
+            The first step to crafting is Harvesting. See rules (which will exist somewhere).
+          </div>
+
+          <div>Step two is to choose what Effects you want your mixture to have. Effects range from Health, Stamina, and Exhaustion effects to resistance to elements, to acids and explosives:</div>
+
+          <div class="accordion">
+            <button class="accordion-button">Crafting: Effects</button>
+            <div class="accordion-content" style="display: none">
+              <table id="alchemy-effects-table">
+                <tr>
+                  <th>Mixture</th>
+                  <th>Method</th>
+                  <th>Effects</th>
+                  <th>Advanced</th>
+                  <th>Drawbacks</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-button">Crafting: Complexity</button>
+            <div class="accordion-content" style="display: none">
+              <div>Once you have the effects selected for a mixture, determine the mixture's Complexity.</div>
+              <div><span class="bold">Complexity = sum of the Tiers of all Effects x the number of Effects</span></div>              <div>EXAMPLE: A potion with Tier 3 Healing and Tier 2 Vigor has a Complexity of (3 + 2) x 2 = 10.</div>
+              <div>Adding a Tier 1 Stim would increase the Complexity to (3 + 2 + 1) x 3 = 18.</div>
+              <div>You can only mix Effects together that share at least one delivery method and whose effects are not contrary to each other - i.e. you cannot combine Bitterfrost Oil with Fireburst Oil, or either of those with any effect that can only be ingested.</div>
+            </div>
+
+          </div>
+
+          <div class="accordion">
+            <button class="accordion-button">Crafting: Making the Mixture</button>
+            <div class="accordion-content" style="display: none">
+              <div>
+                To craft a mixture, a character must have the correct space, equipment, and time. In general, a character must tend to a mixture for a number of hours per day equal to 1/5 the Complexity of the mixture (rounded up). Each day the character does not spend that time, there is a 50% chance the mixture is ruined.
+              </div>
+              <div>
+                A character has a Complexity capacity which determines how many potions he or she can make at one time, determined by his or her relevant Skill.
+              </div>
+              <div class="bold">
+                Complexity Capacity = 30 + 10 x Skill bonus
+              </div>
+              <div>
+                Assuming the time and resources, the character can keep up with any number of potions whose combined Complexity is within the bounds of his or her Complexity Capacity. Each day that the number of simultaneous potions exceeds the crafter’s Complexity Capacity, there is a 25% chance per mixture that it is ruined.
+              </div>
+              <div>
+                EXAMPLE: With a Complexity Capacity of 30 + 10 x 4 (Medicine Skill) = 70, Nymara can work simultaneously on 7 Complexity 10 mixtures or 3 Complexity 10 mixtures and 2 Complexity 20 mixtures, etc. Any number of mixtures whose combined Complexity is 70 or less.
+              </div>
+              <div>
+                Time to Complete. Mixtures require time based on their Complexity to finish.
+              </div>
+              <table>
+                <tr>
+                  <th colspan="2">Duration to Complete a Mixture</th>
+                </tr>
+                <tr>
+                  <th>Complexity</th>
+                  <th>Time (Days)</th>
+                </tr>
+                <tr>
+                  <td>
+                    1-5
+                  </td>
+                  <td>
+                    1/2 Complexity (rounded up)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    6-20
+                  </td>
+                  <td>
+                    Equal to Complexity
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    21-25
+                  </td>
+                  <td>
+                    10 + Complexity
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    26+
+                  </td>
+                  <td>
+                    20 + Complexity
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+        </section>
 
 
         <section id="deepsele" class="tab-content">
@@ -316,7 +425,7 @@
                   </div>
                   <div>
                     As an ACTION, the holder can attempt to remove the Bleeding Out Condition from a living creature. The Test DC
-                    is equal to ½ the DC of the creature’s most recent saving throw against Bleeding Out.
+                    is equal to ½ the DC of the creature’s most recent saving throw against Bleeding Out. On a success, the creature returns to 1 Health.
                   </div>
                   <div>A standard Surgery Bag has 10 uses. Uses can be restored for 8 sp / use in most civilized places.</div>
                 </td>
@@ -1375,6 +1484,8 @@
           
         </section>
 
+
+
       </div>
     </main>
 
@@ -1384,5 +1495,6 @@
 
     <script src="app.js"></script>
     <script src="equipmentData.js"></script>
+    <script src="src/populateAlchemyEffectsTable.js"></script>
   </body>
 </html>
